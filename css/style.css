@@ -1,1 +1,183 @@
+body{
+    background-color: #E1DCC9;
+    color: #000000;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal; 
+}  
+
+/* Styling for the navbar */
+nav{
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Adding diff font for logo */
+.logo {
+    font-size: 4rem;
+    font-family: "Lobster Two", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #412D15;
+    letter-spacing: 5px;
+    text-decoration: none;
+}
+
+/* Styling the search bar */
+.search-bar{
+    background-color: transparent;
+    font-size: 1.5rem;
+    width: 40rem;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    padding: 1rem;
+    transition: all .2s ease-in;
+}
+
+.search-bar i {
+    /* display: flex; */
+    justify-content: last baseline;
+}
+
+#search-input{
+    background-color: transparent;
+    color: black;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    width: 37rem;  
+    transition: all .3s ease;
+}
+
+#search-input::placeholder{
+    color: black;
+}
+
+#search-input:focus{
+    width: 300px;
+}
+
+.search-bar:focus-within{
+    border: 2px solid #424242;
+}
+
+
+/* Styling cart button */
+
+.cart-btn{
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    color: #412D15;
+    cursor: pointer;
+    transition: .2s ease-in;
+}
+
+.cart-btn:hover{
+    color: #412d15d1;
+    transform: translateY(-3px);
+}
+
+.contact{
+    text-decoration: none;
+    color: #000000;
+    font-size: 2rem;
+}
+
+.contact:hover{
+    color: #262626df;
+}
+
+
+/* Starting with aside panel (side panel) */
+.side-panel{
+    /* border: 2px solid #000000; */
+    /* border-radius: 20px;
+    background-color: #fff; */
+    width: fit-content;
+    padding: 5px;
+    text-align: start;
+    position: relative;
     
+}
+
+.side-panel h3{
+    font-size: 2rem;
+}
+
+.sort{
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.sort:focus{
+    outline: none;
+}
+
+/* Styling the cards */
+
+#prod-img{
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+
+#products{
+    
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0;
+    justify-content: center;
+}
+
+.outer-handler{
+    display: flex;
+    gap: 20px;
+}
+
+.cards{
+    background-color: #D8C9A7;
+    flex-direction: column;
+    width: 300px;
+    display: flex;
+    /* align-items: center; */
+    border: 2px solid #000000;
+    padding: 15px;
+    border-radius: 20px;
+    justify-content: center;
+    transition: all .3s ease;
+    box-shadow: #424242;
+}
+
+.cards:hover{
+    transform: translateY(-5px);
+}
+
+.grid-handler{
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+#view-prod-btn{
+    width: 150px;
+    margin-left: 80px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    font-size: 1.2rem;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    cursor: pointer;
+    background-color: #EDE9E6;
+}

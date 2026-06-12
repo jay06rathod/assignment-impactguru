@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Giving document title -->
+    <title>Sprint store</title>
+    <!-- Adding stle.css to the current html -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Adding cdn links for icons and fonts -->
+    <link href="
+    https://cdn.jsdelivr.net/npm/phosphor-icons@1.4.2/src/css/icons.min.css
+    " rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <!-- Logo of sprint with a paw icon -->
+        <a href="/" class="logo"><i class="ph ph-paw-print"></i>Sprint</a href="/">
+        
+        <!-- Search bar with icon and search input -->
+        <div class="search-bar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input id="search-input" type="search" placeholder="Search products">
+        </div>
+        <!-- Cart button -->
+        <button class="cart-btn"><i class="fa-solid fa-bag-shopping"></i></button>
+        <button class="cart-btn"><i class="fa-solid fa-user-circle"></i></i></button>
+        
+        <!-- Contact redirect anchor tag -->
+        <a href="contact.html" class="contact">Contact us</a>
+    </nav>
+    <hr>
+    <div class="grid-handler">
+
+        <!-- Side panel for all type of sorting -->
+        <aside class="side-panel">
+            <!-- Price sort with h2l and l2h -->
+            <h3>Price Sort</h3>
+            <label for="price-sort"></label>
+            <select name="price-sort" id="price-sort" class="sort">
+                <option value="high2low">High to Low</option>
+                <option value="low2high">Low to High</option>
+            </select>
+            
+            <!-- Category sort with 4 categories -->
+            <h3>Category Sort</h3>
+            <label for="cat-sort"></label>
+            <select name="cat-sort" id="cat-sort" class="sort">
+                <option value="men">Men's Clothing</option>
+                <option value="women">Women's Clothing</option>
+                <option value="jewelery">Jewelery</option>
+                <option value="electronics">Electronics</option>
+            </select>  
+        </aside>
+
+        <!-- Listing all the products -->
+        <main class="main-container">
+            <ul id="products">
+                
+            </ul>
+        </main>
+    </div>
+    
+    <!-- Controlling logic using product script -->
+    <script src="./js/products.js"></script>
+</body>
+</html>

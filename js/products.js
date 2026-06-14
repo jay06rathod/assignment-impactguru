@@ -5,6 +5,10 @@ const searchInput = document.querySelector("#search-input");
 
 let products = [];
 
+
+// This function handles the rendering of the cards
+// we also have the loader and card html code
+// we reuse this in the getData() function below 
 function renderProducts(productArray) {
 
     if (productArray.length === 0) {
@@ -48,6 +52,8 @@ function renderProducts(productArray) {
     productList.innerHTML = cards;
 }
 
+
+// This is where we fetch the data and display it also handling exceptions
 async function getData(){
     const url = 'https://fakestoreapi.com/products';
     
@@ -69,6 +75,8 @@ async function getData(){
 getData();
 
 
+// This handles the search functionality 
+// basically we take the input value and match it with any of the words included in product title or category 
 searchInput.addEventListener("input", () => {
     console.log(searchInput.value);
 
@@ -83,6 +91,7 @@ searchInput.addEventListener("input", () => {
     renderProducts(filteredProducts);
 });
 
+// This is where we handle the redirection of view product 
 document.addEventListener("click", (e) => {
     if (e.target.classList.contains("view-prod-btn")) {
         const productId = e.target.dataset.id;
@@ -90,3 +99,49 @@ document.addEventListener("click", (e) => {
         window.location.href = `product.html?id=${productId}`;
     }
 });
+
+
+// handling contact form
+function handleContactSubmit() {
+    const name = document.querySelector("#contact-name").value;
+    const email = document.querySelector("#contact-email").value;
+    const phone = document.querySelector("#contact-phone").value;
+    const message = document.querySelector("#contact-message").value;
+
+    if (name.trim() === "") {
+        alert("Name is required");
+        return;
+    }
+
+    if (
+        !email.includes("@") ||
+        !email.includes(".") ||
+        email.startsWith("@") ||
+        email.endsWith("@") ||
+        email.endsWith(".")
+    ) {
+        alert("Enter a valid email");
+        return;
+    }
+
+    if (
+        phone.trim() === "" ||
+        phone.length !== 10 ||
+        Number.isNaN(Number(phone))
+    ) {
+        alert("Phone number must be exactly 10 digits");
+        return;
+    }
+
+    if (message.trim().length < 20) {
+        alert("Message must contain at least 20 characters");
+        return;
+    }
+
+    alert("Form submitted successfully!");
+
+    name.reset();
+    email.reset();
+    phone.reset();
+    message.reset();
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Giving document title -->
+    <title>Sprint store - Contact Us</title>
+    <!-- Adding stle.css to the current html -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Adding cdn links for icons and fonts -->
+    <link href="
+    https://cdn.jsdelivr.net/npm/phosphor-icons@1.4.2/src/css/icons.min.css
+    " rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav class="navbar">
+        <!-- Logo of sprint with a paw icon -->
+        <a href="/contact.html" class="logo"><i class="fa-solid fa-paw"></i></i>Sprint</a href="/">
+        <button class="back-btn" onclick="window.history.back()"><i class="fa-solid fa-arrow-left"></i></button>
+    </nav>
+
+    <main>
+        <div class="contact-container">
+            <span class="span-support">Support</span>
+            <h1 class="contact-heading">Contact Us</h1>
+        </div>
+        <div class="input-container">
+            <span class="email"><i class="fa-solid fa-envelope"></i> support@sprint.com</span>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="contact-name" class="contact-input" placeholder="Jason Jackson">
+
+            <label for="name">Email</label>
+            <input type="email" name="email" id="contact-email" class="contact-input" placeholder="jason@gmail.com">
+
+            <label for="contact-phone">Phone Number</label>
+            <input
+                type="tel"
+                id="contact-phone"
+                class="contact-input"
+                placeholder="9876543210">
+
+            <label for="name">How can we help you?</label>
+            <textarea name="message" id="contact-message" rows="5" cols="45" class="contact-input"></textarea>
+
+            <button type="submit" class="contact-submit" onclick="handleContactSubmit()">Submit</button>
+        </div>
+    </main>
+
+    <script src="js/products.js"></script>
+</body>
+</html>

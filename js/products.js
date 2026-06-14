@@ -91,6 +91,58 @@ searchInput.addEventListener("input", () => {
     renderProducts(filteredProducts);
 });
 
+// This is where we handle the price sort
+const priceSort = document.querySelector("#price-sort");
+
+priceSort.addEventListener("change", () => {
+    const sortedProducts = [...products]
+
+    if (priceSort.value === "high2low"){
+        sortedProducts.sort((a,b) => b.price - a.price)
+    }
+    
+    if (priceSort.value === "low2high"){
+        sortedProducts.sort((a,b) => a.price - b.price)
+    }
+
+    renderProducts(sortedProducts);
+})
+
+// This is where we handle the category sort
+const catSort = document.querySelector("#cat-sort");
+
+catSort.addEventListener("change", () => {
+    let filteredProducts = [];
+
+    if (catSort.value === "all"){
+        renderProducts(products);
+        return;
+    }
+    
+    if (catSort.value === "men"){
+        filteredProducts = products.filter(product =>
+            product.category === "men's clothing"
+        );
+    }
+    if (catSort.value === "women"){
+        filteredProducts = products.filter(product =>
+            product.category === "women's clothing"
+        );
+    }
+    if (catSort.value === "jewelery"){
+        filteredProducts = products.filter(product =>
+            product.category === "jewelery"
+        );
+    }
+    if (catSort.value === "electronics"){
+        filteredProducts = products.filter(product =>
+            product.category === "electronics"
+        );
+    }
+
+    renderProducts(filteredProducts);
+})
+
 // This is where we handle the redirection of view product 
 document.addEventListener("click", (e) => {
     if (e.target.classList.contains("view-prod-btn")) {

@@ -1,0 +1,167 @@
+/* Styling of product.html */
+
+body{
+    background-color: #E1DCC9;
+    color: #000000;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal; 
+}  
+
+/* Styling for the navbar */
+nav{
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Adding diff font for logo */
+.logo {
+    font-size: 4rem;
+    font-family: "Lobster Two", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #412D15;
+    letter-spacing: 5px;
+    text-decoration: none;
+}
+
+/* Styling the search bar */
+.search-bar{
+    background-color: transparent;
+    font-size: 1.5rem;
+    width: 40rem;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    padding: 1rem;
+    transition: all .2s ease-in;
+}
+
+.search-bar i {
+    /* display: flex; */
+    justify-content: last baseline;
+}
+
+#search-input{
+    background-color: transparent;
+    color: black;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    width: 200px;
+    transition: all .3s ease;
+}
+
+#search-input::placeholder{
+    color: black;
+}
+
+#search-input:focus{
+    width: 37rem;
+}
+
+.search-bar:focus-within{
+    border: 2px solid #424242;
+}
+
+
+/* Styling cart button */
+
+.cart-btn{
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    color: #412D15;
+    cursor: pointer;
+    transition: .2s ease-in;
+}
+
+.cart-btn:hover{
+    color: #412d15d1;
+    transform: translateY(-3px);
+}
+
+.contact{
+    text-decoration: none;
+    color: #000000;
+    font-size: 2rem;
+}
+
+.contact:hover{
+    color: #262626df;
+}
+
+
+/* Styling the aside image */
+
+.image-container{
+    margin-left: 120px;
+    margin-top: 50px;
+}
+
+.image-container img {
+    border-radius: 20px;
+    border: 1px solid #3a3939c6;
+    width: 300px;
+    height: auto;
+    padding: 30px;
+    background-color: #D8C9A7;
+}
+
+/* Styling the main details container */
+.container{
+    position: absolute;
+    top: 150px;
+    left: 550px;
+}
+
+.desc{
+    width: 500px;
+}
+
+.loader {
+    font-size: 3rem;
+    position: fixed;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+.back-btn{
+    font-size: 2rem;
+    position: absolute;
+    left: 2%;
+    top: 20%;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.back-btn:hover{
+    background-color: #412D15;
+    color: #D8C9A7;
+    transform: translateY(-5px);
+}
+
+.add-prod-btn{
+    width: 150px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    font-size: 1.2rem;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    cursor: pointer;
+    background-color: #EDE9E6;
+    transition: all .3s ease;
+}
+
+.add-prod-btn:hover{
+    transform: translateY(-2px);
+}

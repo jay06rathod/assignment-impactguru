@@ -48,7 +48,7 @@ nav{
     border: none;
     outline: none;
     font-size: 1.5rem;
-    width: 37rem;  
+    width: 200px;
     transition: all .3s ease;
 }
 
@@ -57,7 +57,7 @@ nav{
 }
 
 #search-input:focus{
-    width: 300px;
+    width: 37rem;
 }
 
 .search-bar:focus-within{

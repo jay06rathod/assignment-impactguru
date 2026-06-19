@@ -152,6 +152,15 @@ document.addEventListener("click", (e) => {
     }
 });
 
+document.addEventListener("click", (e) => {
+    if (e.target.classList.contains("user-btn")) {
+        const productId = e.target.dataset.id;
+
+        window.location.href = `default.html`;
+    }
+});
+
+
 
 // handling contact form
 function handleContactSubmit() {

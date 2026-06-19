@@ -318,3 +318,21 @@ footer {
     margin-top: 20px;
     font-size: 1.5rem;
 }
+
+
+.err-logo{
+    text-align: center;
+    font-size: 6rem;
+}
+
+.err-message{
+    text-align: center;
+    font-size: 3rem;
+}
+
+.quantity-style{
+    width: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    
+}

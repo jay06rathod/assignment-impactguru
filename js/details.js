@@ -2,6 +2,8 @@ const product = document.querySelector("main");
 
 let products = [];
 
+
+
 // This is where we render the product by id
 function renderProducts(prodID){
 
@@ -13,7 +15,7 @@ function renderProducts(prodID){
         return;
     }
 
-    const { image, title, category, description, price, id } = singleProduct;
+    const { image, title, category, description, price, id, rating } = singleProduct;
 
     product.innerHTML = `
     <button class="back-btn" onclick="window.history.back()"><i class="fa-solid fa-arrow-left"></i></button>
@@ -38,11 +40,40 @@ function renderProducts(prodID){
                 </div>
                 <div class = "stars-container">
                     <h3>Reviews: </h3>
+                    <div class="stars-block">
+                        
+                    </div>
+                    <div class="rev-count">
+                        <span class="count">Total Reviews: ${rating.count}</span>
+                    </>
                 </div>
             </div>
         </section>
     `
+    const starsBlock = document.querySelector(".stars-block");
+    
+    if(starsBlock){
+        const activeStars = Math.round(rating?.rate ?? 0);
+
+        Array(5).fill().forEach((_, index) => {
+            const star = document.createElement('i');
+            
+            
+            if (index < activeStars) {
+                star.className = "fa-solid fa-star";
+                star.style.color = "#ffcc00"
+            } else {
+                star.className = "fa-solid fa-star";
+                star.style.color = "#3b3b3b"
+            }
+            
+            starsBlock.appendChild(star);
+        });
+    }
 }
+
+
+
 
 // This is where we fetch the data and display it also handling exceptions
 async function getData() {
@@ -72,6 +103,4 @@ async function getData() {
 
 getData();
 
-function handleStars(){
 
-}

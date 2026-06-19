@@ -165,3 +165,24 @@ nav{
 .add-prod-btn:hover{
     transform: translateY(-2px);
 }
+
+/* Reviews and stars css */
+
+.stars-block {
+    display: flex;       
+    gap: 4px;            
+}
+
+.rate{
+    color: #ffcc00;
+}
+
+.stars-block i {
+    color: #3b3b3b;
+    font-size: 20px;    
+}
+
+.rev-count{
+    margin-top: 2%;
+    font-size: 1.2rem;
+}
